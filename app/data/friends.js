@@ -3,9 +3,10 @@
 
 var friends = [
 {
-    "name": "Peachy Keen",
-    "photo": "../public/images/grey1.jpg",
-    "scores": [
+    name: "Peachy Keen",
+    photo: "../public/images/grey1.jpg",
+    message: "It really doesn't matter how you answered, a grey is always the best match!",
+    scores: [
         2,
         3,
         5,
@@ -19,9 +20,10 @@ var friends = [
     ]
 },
 {
-    "name": "Happy Harvey",
-    "photo": "../public/images/grey2.jpg",
-    "scores": [
+    name: "Happy Harvey",
+    photo: "../public/images/grey2.jpg",
+    message: "It really doesn't matter how you answered, a grey is always the best match!",
+    scores: [
         4,
         1,
         2,
@@ -35,9 +37,10 @@ var friends = [
     ]
 },
 {
-    "name": "Santa's Little Helper",
-    "photo": "../public/images/grey3.jpg",
-    "scores": [
+    name: "Santa's Little Helper",
+    photo: "../public/images/grey3.jpg",
+    message: "It really doesn't matter how you answered, a grey is always the best match!",
+    scores: [
         5,
         3,
         1,
@@ -51,9 +54,10 @@ var friends = [
     ]
 },
 {
-    "name": "Beach Bum",
-    "photo": "../public/images/grey4.jpg",
-    "scores": [
+    name: "Beach Bum",
+    photo: "../public/images/grey4.jpg",
+    message: "It really doesn't matter how you answered, a grey is always the best match!",
+    scores: [
         1,
         2,
         3,
@@ -67,9 +71,10 @@ var friends = [
     ]
 },
 {
-    "name": "Double Trouble",
-    "photo": "../public/images/grey-double.jpg",
-    "scores": [
+    name: "Double Trouble",
+    photo: "../public/images/grey-double.jpg",
+    message: "It really doesn't matter how you answered, a grey is always the best match and 2 is better than 1!",
+    scores: [
         5,
         5,
         4,
