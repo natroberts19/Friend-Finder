@@ -47,7 +47,7 @@ form {
     margin-bottom: 30px;
 }
 
-/* Styling for the modal results panel. */
+/* Styling for the modal results pop-up. */
 .modalDialog {
     position: fixed;
     font: 400 20px Lato, sans-serif;

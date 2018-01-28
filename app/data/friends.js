@@ -1,5 +1,6 @@
-// This file will store the array of objects for each greyhound ("friend").
-// Will hold all client side js also?
+// DATA FILE: This file will store the array of objects for each greyhound ("friend"). 
+// Will hold all client side js also???
+// =============================================================
 
 var friends = [
 {
@@ -88,3 +89,6 @@ var friends = [
     ]
 },
 ]
+
+// Export the array to make it accessible to other files using require.
+module.exports = friends;

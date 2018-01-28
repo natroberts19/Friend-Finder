@@ -28,9 +28,9 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
         // Add the code here to complete the matching logic behind the scenes based on survey data that was entered.
-        // create variable to capture the survey answers(scores) that are submitted:
-        var surveyData = req.body.scores;
-        // create an empty array variable to store the numbers:
+        // Create variable to capture the survey answers(scores) that are submitted:
+        var surveyData = req.friends.scores;
+        // Create an empty array variable to store the numbers:
         var surveyScores = [];
         // Now compare user surveyScores to friends.scores for grey1, grey2, grey3, grey4, and grey-double.
         // Calculate the differences between the scores:
