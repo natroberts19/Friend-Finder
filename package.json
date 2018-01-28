@@ -1,0 +1,32 @@
+{
+  "name": "mans_best_friend_finder",
+  "version": "1.0.0",
+  "description": "app designed to match user up with the perfect dog.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natroberts19/FriendFinder.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "friend",
+    "greyhound",
+    "match"
+  ],
+  "author": "Natalie Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natroberts19/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/natroberts19/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
