@@ -1,5 +1,4 @@
 // DATA FILE: This file will store the array of objects for each greyhound ("friend"). 
-// Will hold all client side js also???
 // =============================================================
 
 var friends = [

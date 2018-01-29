@@ -26,11 +26,13 @@ app.use(bodyParser.json());
 // Express.static will allow you to set a static directory for things like your
 // front end javascript, images, etc
 // ================================================================================
+
+// *** This is working, HOWEVER I cannot see images or CSS ***
 app.use(express.static("public"));
 
 // ================================================================================
 // ROUTER
-// The below points our server to a series of "route" files.
+// The below points our server to a series of "routing" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 require("./app/routing/apiRoutes")(app);

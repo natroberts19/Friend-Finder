@@ -1,5 +1,12 @@
 /* Styling for home.html */
 body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: black;
+    background-color: whitesmoke;
+}
+
+#home {
     background-image: url("../images/grey-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,13 +26,20 @@ p {
     font: 400 20px Lato, sans-serif;
 }
 
+#home-button {
+    width: 300px;
+    color: darkslategray;
+    background-color: aquamarine;
+    font: 400 20px Lato, sans-serif;
+}
+
 .jumbotron {
     background-color: bisque;
     opacity: .8;
 }
 
 /* styling for survey.html */
-#inlineFormCustomSelect {
+.custom-select.mr-sm-2 {
     width: 250px;
     color: darkslategray;
 }
@@ -45,6 +59,12 @@ p {
 
 form {
     margin-bottom: 30px;
+}
+
+.footer {
+    background-color: bisque;
+    text-align: center;
+    padding-top: 10px;
 }
 
 /* Styling for the modal results pop-up. */

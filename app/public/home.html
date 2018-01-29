@@ -12,24 +12,30 @@
     <title>Man's Best Friend Finder</title>
 </head>
 
-<body>
-    <!-- main heading area with survey title -->
+<body id="home">
+    <!-- main heading area with app title -->
     <div class="jumbotron text-center">
         <h1>Man's Best Friend Finder</h1>
         <br>
-        <!-- click function for this button will be stored in survey.js -->
-        <button type="submit" class="btn btn-primary">Take the Survey</button>
+        <a href="survey.html"><button type="button" class="btn btn primary" id="home-button">Take the Survey</button></a>
         <br>
         <h3>We'll show you a greyt match!</h3>
+        <br>
+
+        <!-- footer section. breadcrumb links -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/friends">API Friends Link</a> |
+                    <a href="https://github.com/natroberts19/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
     </div>
 
-
-    <!-- container that holds background pic. -->
-    <div class="container">
-    </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascript/survey.js"></script>
+    <script type="text/javascript" src="javascript/frontend.js"></script>
 
 </body>
 
