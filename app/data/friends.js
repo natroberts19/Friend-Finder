@@ -1,5 +1,6 @@
+// ===================================================================================
 // DATA FILE: This file will store the array of objects for each greyhound ("friend"). 
-// =============================================================
+// ===================================================================================
 
 var friends = [
 {
@@ -88,6 +89,8 @@ var friends = [
     ]
 },
 ]
+
+console.log(friends);
 
 // Export the array to make it accessible to other files using require.
 module.exports = friends;
