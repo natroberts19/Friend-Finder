@@ -23,15 +23,14 @@ module.exports = function (app) {
     // Below code handles when a user submits a survey form and thus submits data to the server.
     // When a user submits form data (a JSON object)
     // ...the JSON is pushed to the appropriate JavaScript array
-    // (ex. User fills out a reservation request... this data is then sent to the server...
+    // (ex. User fills out a survey... this data is then sent to the server...
     // Then the server saves the data to the friends array)
     // ---------------------------------------------------------------------------
 
     app.post("/api/friends", function (req, res) {
         // BACK END JAVASCRIPT: Add the code here to complete the matching logic behind the scenes based on survey data that was entered.
         // Create variable to capture the survey answers(scores) that are submitted:
-        newSurveyScores = req.body;
-        console.log("new submitted survey scores: ", newSurveyScores);
+        res.json(friends);
         
         // Now compare user newSurveyScores to friends.scores for grey1, grey2, grey3, grey4, and grey-double.
         // Calculate the differences between the scores:
@@ -40,18 +39,15 @@ module.exports = function (app) {
         // Iterate over the friends array first.
         // Calculate the differences for each friend (Iterate again??)
         // The closest match will be the user with the least difference amount. 
-        
-        // Push the result to the modal pop up. <div id="modal-text">
-        // Use jQuery .modal method?
+        friends.forEach(function(friend) {
+            console.log("forEach for friend array: ", friend);
 
+            // var difference = 0
+            // newSurveyScores.forEach(function(match) {
+            //     difference += Math.abs(friends.scores - newSurveyScores);
+            // })
+        })
+        
     });
 
-    // ---------------------------------------------------------------------------
-    // Not sure if I need this!
-    // app.post("/api/clear", function () {
-    //     // Empty out the arrays of data
-    //     surveyScores = [];
-
-    //     console.log(surveyScores);
-    // });
 };

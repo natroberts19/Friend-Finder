@@ -1,5 +1,4 @@
 // FRONT END JAVASCRIPT FILE: This javascript file will hold all the front-end (client) javascript functionality for survey.html.
-
 // Survey.html will need a click function to "Submit" the survey data and to run the modal actions.
 
 // Essentially this code drives the click functions and "POSTS" our survey data to our express server.
@@ -9,7 +8,6 @@
 $("#survey-button").on("click", function (event) {
         event.preventDefault();
 
-        $.post('/api/friends', newSurveyScores);
         // Here we grab the answers from the drop-down list questions on survey.html.
         var newSurveyScores = {
             Q1: $("#Q1").val().trim(),
@@ -24,10 +22,15 @@ $("#survey-button").on("click", function (event) {
             Q10: $("#Q10").val().trim()
         };
         console.log("Capture newSurveyScores:", newSurveyScores);
-    }
-    .then(function (data) {}
+       
+        $.post('/api/friends', newSurveyScores).then(function (data) {
+            console.log(data)
+        })
 
 });
 
+// Will need to push the match data to the modal pop up window.
+// Push the result to the modal pop up. <div id="modal-text">
+// Use jQuery .modal method?
 
         // ** I think I need to export this file??? **
