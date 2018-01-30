@@ -30,7 +30,7 @@ module.exports = function (app) {
     app.post("/api/friends", function (req, res) {
         // BACK END JAVASCRIPT: Add the code here to complete the matching logic behind the scenes based on survey data that was entered.
         // Create variable to capture the survey answers(scores) that are submitted:
-        res.json(friends);
+        res.json(req.body);
         
         // Now compare user newSurveyScores to friends.scores for grey1, grey2, grey3, grey4, and grey-double.
         // Calculate the differences between the scores:
@@ -39,14 +39,13 @@ module.exports = function (app) {
         // Iterate over the friends array first.
         // Calculate the differences for each friend (Iterate again??)
         // The closest match will be the user with the least difference amount. 
-        friends.forEach(function(friend) {
-            console.log("forEach for friend array: ", friend);
-
-            // var difference = 0
-            // newSurveyScores.forEach(function(match) {
-            //     difference += Math.abs(friends.scores - newSurveyScores);
-            // })
-        })
+        for (var i=0; i < friends.length; i++) {
+            console.log("Scores for the friends: ", friends[i].scores);
+            var difference = 0
+            // Use a hard code example to try to test the calc.
+                difference += Math.abs(friends[i].scores - ([ 5, 3, 1, 1, 2, 5, 2, 3, 5, 1 ]));
+                console.log("Hard Code Score Diff: ", difference);
+        }
         
     });
 
