@@ -29,23 +29,41 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
         // BACK END JAVASCRIPT: Add the code here to complete the matching logic behind the scenes based on survey data that was entered.
-        // Create variable to capture the survey answers(scores) that are submitted:
-        res.json(req.body);
         
-        // Now compare user newSurveyScores to friends.scores for grey1, grey2, grey3, grey4, and grey-double.
+        // *** Create a new variable to capture the survey answers(scores) that are submitted?????
+        var newSurveyScores = req.body;
+        
+        // Compare user newSurveyScores to friends.scores for grey1, grey2, grey3, grey4, and grey-double.
         // Calculate the differences between the scores:
         // ex. newSurveyScores = [1, 3, 4, 5, 2, 4, 4, 4, 5, 5] - "grey1" friends.scores[0] = [2, 3, 5, 1, 3, 4, 1, 4, 5, 5], etc. for each "grey friend"
         // TotalDiff = 1+1+4+1+3 = 10 (Remember to use Absolute Value! Use Math.abs)
-        // Iterate over the friends array first.
-        // Calculate the differences for each friend (Iterate again??)
         // The closest match will be the user with the least difference amount. 
+        
+        // ** HOW DO I TEST THIS????
+        // Iterate over all of the friends in the array first.
         for (var i=0; i < friends.length; i++) {
-            console.log("Scores for the friends: ", friends[i].scores);
+            console.log("Names of the friends: ", friends[i].name);
+            let myFriend = friends[i];
+            
+            // Will need to iterate again to get the scores of the friends and then calculate the differances between the friends and newSurveyScores. Use a hard code example first to try to test the calc before using frontend info.
             var difference = 0
-            // Use a hard code example to try to test the calc.
-                difference += Math.abs(friends[i].scores - ([ 5, 3, 1, 1, 2, 5, 2, 3, 5, 1 ]));
-                console.log("Hard Code Score Diff: ", difference);
-        }
+            for (var j=0; j < myFriend.scores.length; j++) { 
+                difference += Math.abs(myFriend.scores[j] - newSurveyScores.scores[j]);
+                
+             }
+             console.log("Score Diff: ", difference);
+            }
+
+
+        // Create "match variable" to capture the matching friend information.
+        // var match = {
+        //     name: "",
+        //     photo = "",
+        //     message = ""
+        // }
+
+        // Needs to be at the end of the Post.
+        res.json(friends[0]);
         
     });
 

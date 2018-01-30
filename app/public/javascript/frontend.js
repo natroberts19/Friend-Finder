@@ -8,29 +8,31 @@
 $("#survey-button").on("click", function (event) {
         event.preventDefault();
 
-        // Here we grab the answers from the drop-down list questions on survey.html.
-        var newSurveyScores = {
-            Q1: $("#Q1").val().trim(),
-            Q2: $("#Q2").val().trim(),
-            Q3: $("#Q3").val().trim(),
-            Q4: $("#Q4").val().trim(),
-            Q5: $("#Q5").val().trim(),
-            Q6: $("#Q6").val().trim(),
-            Q7: $("#Q7").val().trim(),
-            Q8: $("#Q8").val().trim(),
-            Q9: $("#Q9").val().trim(),
-            Q10: $("#Q10").val().trim()
-        };
+        // Grab the answers from the drop-down list questions on survey.html.
+        var newSurveyScores = [
+            $("#Q1").val().trim(),
+            $("#Q2").val().trim(),
+            $("#Q3").val().trim(),
+            $("#Q4").val().trim(),
+            $("#Q5").val().trim(),
+            $("#Q6").val().trim(),
+            $("#Q7").val().trim(),
+            $("#Q8").val().trim(),
+            $("#Q9").val().trim(),
+            $("#Q10").val().trim()
+        ];
         console.log("Capture newSurveyScores:", newSurveyScores);
        
-        $.post('/api/friends', newSurveyScores).then(function (data) {
+// object for field called scores, whatever we posted in Postman needs to be the variable here, not newSurveyScores
+        $.post("/api/friends", newSurveyScores,
+        function (data) {
+            // data is what holds the matching friend (whatever was sent by res.json)
             console.log(data)
+            // Need code here to grab the results of the match from the backend (I think???)
+            // Will need to push the match data to the modal pop up window.
+            // Push the result to the modal pop up. <div id="modal-text">
+            // Use jQuery .modal method?
+
         })
 
 });
-
-// Will need to push the match data to the modal pop up window.
-// Push the result to the modal pop up. <div id="modal-text">
-// Use jQuery .modal method?
-
-        // ** I think I need to export this file??? **
