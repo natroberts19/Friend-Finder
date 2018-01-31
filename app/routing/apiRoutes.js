@@ -39,31 +39,43 @@ module.exports = function (app) {
         // TotalDiff = 1+1+4+1+3 = 10 (Remember to use Absolute Value! Use Math.abs)
         // The closest match will be the user with the least difference amount. 
         
-        // ** HOW DO I TEST THIS????
-        // Iterate over all of the friends in the array first.
+        // ** TO TEST THIS ** Use Postman to manually add a survey response, click post and see results of the code below.
+        var differenceArray = [];
+        // Part 1. A. Iterate over all of the friends in the array first.
         for (var i=0; i < friends.length; i++) {
             console.log("Names of the friends: ", friends[i].name);
-            let myFriend = friends[i];
+            var myFriend = friends[i];
             
-            // Will need to iterate again to get the scores of the friends and then calculate the differances between the friends and newSurveyScores. Use a hard code example first to try to test the calc before using frontend info.
+            // Part 1. B. Iterate again to get the scores of the friends and then calculate the differances between the friends and newSurveyScores. 
             var difference = 0
+
             for (var j=0; j < myFriend.scores.length; j++) { 
                 difference += Math.abs(myFriend.scores[j] - newSurveyScores.scores[j]);
                 
              }
              console.log("Score Diff: ", difference);
+                differenceArray.push(difference);
+                console.log("Differance Array: ", differenceArray);
             }
+           
+            // Part 2. of the post code, loop over the differenceArray to isolate the lowest one. (Or, just use Math min???)
+            // Use Math min value to find lowest score. https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript:
+            var minScore = Math.min.apply(Math, differenceArray)
+            console.log("Minimum Score: ", minScore);
 
+            // ** How do I match my minScore back up to the correct friend? **
 
-        // Create "match variable" to capture the matching friend information.
-        // var match = {
-        //     name: "",
-        //     photo = "",
-        //     message = ""
-        // }
+            // Create "match variable" to capture the matching friend information. ** This is hard coded right now. **
+            var bestMatch = {
+                 name: friends[0].name,
+                 photo: friends[0].photo,
+                 message: friends[0].message,
+                 score: minScore 
+            };
+            console.log("Hard Code:", bestMatch);
 
-        // Needs to be at the end of the Post.
-        res.json(friends[0]);
+        // Needs to be at the end of the Post. This is the match result. Will be bestMatch variable.
+        res.json(bestMatch);
         
     });
 
