@@ -66,16 +66,16 @@ module.exports = function (app) {
             // ** How do I match my minScore back up to the correct friend? **
 
             // Create "match variable" to capture the matching friend information. ** This is hard coded right now. **
-            var bestMatch = {
-                 name: friends[0].name,
-                 photo: friends[0].photo,
-                 message: friends[0].message,
-                 score: minScore 
-            };
-            console.log("Hard Code:", bestMatch);
+            // var bestMatch = {
+            //      name: friends[0].name,
+            //      photo: friends[0].photo,
+            //      message: friends[0].message,
+            //      score: minScore 
+            // };
+            // console.log("Hard Code:", bestMatch);
 
         // Needs to be at the end of the Post. This is the match result. Will be bestMatch variable.
-        res.json(bestMatch);
+        res.json(friends[0]);
         
     });
 

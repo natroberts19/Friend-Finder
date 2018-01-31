@@ -24,7 +24,7 @@ $("#survey-button").on("click", function (event) {
         console.log("Capture newSurveyScores:", newSurveyScores);
        
 // object for variable called bestMatch, whatever we posted in Postman needs to be the variable here, not newSurveyScores.
-        $.post("/api/friends", bestMatch,
+        $.post("/api/friends", friends[0],
         function (data) {
             // data is what holds the matching friend (whatever was sent by res.json in apiRoutes)
             console.log(data)

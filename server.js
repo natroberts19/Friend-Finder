@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 // ================================================================================
 
 // *** This is working, HOWEVER I cannot see images or CSS ***
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname,"/app/public")));
 
 // ================================================================================
 // ROUTER
