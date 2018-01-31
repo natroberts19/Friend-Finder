@@ -18,16 +18,14 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 // ================================================================================
 // Express.static will allow you to set a static directory for things like your
 // front end javascript, images, etc
 // ================================================================================
 
-// *** This is working, HOWEVER I cannot see images or CSS ***
 app.use(express.static(path.join(__dirname,"/app/public")));
 
 // ================================================================================
