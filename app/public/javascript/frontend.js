@@ -23,19 +23,18 @@ $("#survey-button").on("click", function (event) {
         ];
         console.log("Capture newSurveyScores:", newSurveyScores);
        
-// object for variable called bestMatch, whatever we posted in Postman needs to be the variable here, not newSurveyScores.
+// This posts the match data to the modal for display to the user. "Data" is the object for the bestMatch variable determined in the apiRoutes file.
         $.post("/api/friends", bestMatch,
         function (data) {
             // data is what holds the matching friend (whatever was sent by res.json in apiRoutes)
             console.log(data)
-            // Need code here to grab the results of the bestMatch from the backend (I think???)
-            // Will need to push the match data to the modal pop up window.
-            // Push the result to the modal pop up. <div id="modal-text">
+            // Need to grab the results of the bestMatch from the backend.
+            // Push the bestMatch data to the modal pop up window.
             // Use jQuery .modal method?
-            $("#match-name").html(data.name);
-            $("#match-pic").attr("src", data.photo);
-            $("#match-message").html(data.message);
-            $("#openModal").modal("toggle");
+                // $("#match-name").html(data.name);
+                // $("#match-pic").attr("src", data.photo);
+                // $("#match-message").html(data.message);
+                // $("#openModal").modal("toggle");
 
         })
 
