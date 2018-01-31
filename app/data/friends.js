@@ -90,7 +90,7 @@ var friends = [
 },
 ]
 
-console.log(friends);
+// console.log(friends);
 
 
 // Export the array to make it accessible to other files using require.
