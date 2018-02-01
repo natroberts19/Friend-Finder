@@ -27,17 +27,17 @@ $("#survey-button").on("click", function (event) {
 
         // This posts the match data to the modal for display to the user. "Data" is the object for the bestMatch variable determined in the apiRoutes file.
         $.post("/api/friends", bestMatch,
-                function (data) {
+                function (data, bestMatch) {
                         // data is what holds the matching friend (whatever was sent by res.json in apiRoutes)
                         console.log(data)
                         // Need to grab the results of the bestMatch from the backend.
                         // Push the bestMatch data to the modal pop up window.
                         // Use jQuery .modal method to pop the modal window.
                         // ============================================================
-                        // $("#match-name").html(data.name);
-                        // $("#match-pic").attr("src", data.photo);
-                        // $("#match-message").html(data.message);
-                        // $("#openModal").modal("toggle");
+                        $("#match-name").html(data.name);
+                        $("#match-pic").attr("src", data.photo);
+                        $("#match-message").html(data.message);
+                        $("#openModal").modal("toggle");
 
                 })
 
