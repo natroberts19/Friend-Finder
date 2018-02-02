@@ -203,20 +203,31 @@
         </footer>
     </div>
 <!-- Modal Response -->
-<!-- Reference for my modal template: https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ -->
-<!-- This eventually will auto pop.-->
-<!-- <a href="#openModal">Open Modal</a> -->
-        
-        <div id="openModal" class="modalDialog">
-                <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <div id="modal-text">
-                            <div id="match-name"></div>
-                            <div id="match-pic"></div>
-                            <div id="match-message"></div>
-                        </div>
-                    </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title" id="match-name"></h2>
         </div>
+        <div class="modal-body">
+            <img id="match-pic" class="img-responsive" alt="greyhound">
+            <br>
+            <div id="match-message"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>

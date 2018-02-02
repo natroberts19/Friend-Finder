@@ -37,7 +37,7 @@ $("#survey-button").on("click", function (event) {
                         $("#match-name").html(data.name);
                         $("#match-pic").attr("src", data.photo);
                         $("#match-message").html(data.message);
-                        $("#openModal").modal("toggle");
+                        $("#myModal").modal();
 
                 })
 
