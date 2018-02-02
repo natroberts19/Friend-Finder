@@ -26,8 +26,8 @@ $("#survey-button").on("click", function (event) {
         console.log("Capture newSurveyScores:", newSurveyScores);
 
         // This posts the match data to the modal for display to the user. "Data" is the object for the bestMatch variable determined in the apiRoutes file.
-        $.post("/api/friends", bestMatch,
-                function (data, bestMatch) {
+        $.post("/api/friends", newSurveyScores,
+                function (data) {
                         // data is what holds the matching friend (whatever was sent by res.json in apiRoutes)
                         console.log(data)
                         // Need to grab the results of the bestMatch from the backend.
